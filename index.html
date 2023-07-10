@@ -32,6 +32,56 @@
     </div>
 
     <hr>
+    <script id="result-template" type="text/x-handlebars-template">
+        {{#each apartments}}
+        <Div class="result">
+                <img src="{{img}}">
+            <Div class="l-addr">
+                ...........
+            </div>
+            <Div class="l-price">
+                ...........
+            </div>
+            <Div class="l-rooms">
+                ...........
+            </div>
+            <Div class="l-park">
+                ...........
+            </div>   
+            <Div class="l-immediate">
+                ...........
+            </div> 
+            <Div class="address">
+                {{address}}
+            </div>
+            <Div class="price">
+                {{price}}
+            </div>
+            <Div class="rooms">
+                {{rooms}}
+            </div>
+            {{#if parking}}
+            <Div class="parking">
+                Parking
+            </div>   
+            {{else}}
+            <Div class="no-match">
+                No Parking
+            </div> 
+            {{/if}}
+            {{#if immediate}}
+            <Div class="immediate">
+                Immediate
+            </div>   
+            {{else}}
+            <Div class="no-match">
+                Later
+            </div> 
+            {{/if}}
+        </div>
+          {{/each}}      
+
+    </script>
 
     <div id="results"></div>
 

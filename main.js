@@ -1,10 +1,10 @@
 
 $("button").on("click", function () {
     let address = $("#addr-input").val()
-    let minPrice = $("#min-p-input").val()
-    let maxPrice = $("#max-p-input").val()
-    let minRooms = $("#min-r-input").val()
-    let maxRooms = $("#max-r-input").val()
+    let minPrice = parseInt($("#min-p-input").val()) || 0
+    let maxPrice = parseInt($("#max-p-input").val()) || 0
+    let minRooms = parseInt($("#min-r-input").val()) || 0
+    let maxRooms = parseInt($("#max-r-input").val()) || 0
     let immediate = $("#immed-y").is(':checked')
     let parking = $("#park-y").is(':checked')
 

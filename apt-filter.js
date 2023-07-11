@@ -9,8 +9,8 @@ const findRelevantApts = function (address, minPrice, maxPrice, minRooms, maxRoo
         a.price <= (maxPrice || a.price) &&
         a.rooms >= (minRooms || 0) &&
         a.rooms <= (maxRooms || a.rooms) &&
-        immediate ? a.immediate : true &&
-        parking ? a.parking : true
+        (immediate ? a.immediate : true) &&
+        (parking ? a.parking : true)
     )
 
     // immediate = !immediate[0].checked
